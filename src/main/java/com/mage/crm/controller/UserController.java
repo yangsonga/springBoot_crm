@@ -1,5 +1,6 @@
 package com.mage.crm.controller;
 
+import com.mage.crm.model.MessageModel;
 import com.mage.crm.model.User;
 import com.mage.crm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @RequestMapping("userLogin")
+    @ResponseBody
+    public MessageModel login(String userName, String userPwd){
+        MessageModel message = userService.login(userName, userPwd);
+        return message;
+    }
     @RequestMapping("list")
     @ResponseBody
     public List<User> findAll() {
@@ -29,5 +36,6 @@ public class UserController {
         userService.updateTrueName(userId, trueName);
         return "success";
     }
+
 
 }

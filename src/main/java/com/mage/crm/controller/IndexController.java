@@ -10,12 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Slf4j
 public class IndexController extends BaseController {
 
-    @RequestMapping("welcome")
+    @RequestMapping("main")
     public String index(String name, String password, Model model) {
-        log.debug("打印传入的name={}, password={}", name, password);
-        model.addAttribute("name", name);
-        model.addAttribute("password", password);
-        return "welcome";
+        return "main";
     }
 
     @RequestMapping("index")

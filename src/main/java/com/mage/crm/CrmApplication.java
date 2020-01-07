@@ -12,8 +12,7 @@ public class CrmApplication {
 
     public static void main(String[] args) {
         log.info("hahahaha...");
-        SpringApplication.run(CrmApplication.class, args);
-
+       SpringApplication.run(CrmApplication.class,args);
     }
 
 }

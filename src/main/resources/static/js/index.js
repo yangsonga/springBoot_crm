@@ -23,11 +23,11 @@ function userLogin() {
         success:function (data) {
             if(data.code == 200){
                 alert(data.msg);
-                $.cookie("userName",data.result.userName);
+               /* $.cookie("userName",data.result.userName);
                 $.cookie("trueName",data.result.trueName);
-                $.cookie("userId",data.result.userId);
+                $.cookie("userId",data.result.userId);*/
 
-                //实现页面的挑战
+                //实现页面的跳转
                 window.location.href="main";
             }else{
                 alert(data.msg);

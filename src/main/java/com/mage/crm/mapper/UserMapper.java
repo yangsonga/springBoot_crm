@@ -4,6 +4,7 @@ import com.mage.crm.model.User;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+import util.StringUtil;
 
 import java.util.List;
 
@@ -16,4 +17,6 @@ public interface UserMapper {
 
     @Update("update t_user set true_name = #{trueName} where id = #{userId}")
     void updateTrueName(@Param("userId") Integer userId, @Param("trueName") String trueName);
+    @Select("select user_name,user_pwd from t_user where user_name=#{userName}")
+    User getUserByUserName(String userName);
 }
