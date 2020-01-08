@@ -7,8 +7,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class User extends BaseVo {
-    private String id;
-    private String userName;
+    private String id="1";
+    private String userName="杨松";
     private String userPwd;
     private String trueName;
     private String phone;
